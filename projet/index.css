@@ -1,0 +1,516 @@
+/* Style the header with a grey background and some padding */
+
+.header1 {
+  overflow: hidden;
+  padding: 20px 10px;
+  background-image: -moz-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#62cb83),
+    to(#62cb83)
+  );
+  background-image: -webkit-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: -o-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: linear-gradient(to bottom, #c3a74b, #62cb83);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEC690', endColorstr='#A4E0EBd', GradientType=0);
+}
+
+/* Style the header links */
+.header1 a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header1 a.log {
+  font-size: 8rem;
+
+  width: 10%;
+  font-family: "Cookie";
+}
+
+/* Change the background color on mouse-over */
+.header1 a:hover {
+  background-color: rgba(183, 255, 207, 0.514);
+  color: black;
+}
+
+/* Style the active/current link*/
+.header1 a.active {
+  background-color: #62cb83;
+  color: rgb(255, 255, 255);
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header1 a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+#logo {
+  width: 80px;
+}
+
+* {
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+}
+
+footer {
+  flex-shrink: 0;
+  border-top: 1px dashed #000;
+  width: 100%;
+  color: #000000;
+  background-image: -moz-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#62cb83),
+    to(#62cb83)
+  );
+  background-image: -webkit-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: -o-linear-gradient(top, #c3a74b, #62cb83);
+  background-image: linear-gradient(to bottom, #c3a74b, #62cb83);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEC690', endColorstr='#A4E0EBd', GradientType=0);
+}
+
+.contenu-footer {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 50px 0 100px;
+}
+.bloc {
+  width: 25%;
+  margin: 0 30px;
+}
+
+/*  div vid      */
+.saison {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.saison h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Cookie";
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.choix {
+  z-index: 1;
+  text-align: center;
+}
+
+.choix ul {
+  display: inline-flex;
+  list-style: none;
+  color: #f1f1f1;
+}
+
+.choix ul li {
+  width: 120px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.choix ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Cookie";
+  font-size: 70px;
+  opacity: 0.7;
+}
+
+.choix ul li:hover {
+  background: rgba(171, 212, 178, 0.548);
+  border-radius: 6px;
+  width: 150px;
+}
+
+.lieux-été,
+.lieux-hiver {
+  display: none;
+}
+.choix ul li:hover .lieux-hiver,
+.choix ul li:hover .lieux-été {
+  display: block;
+  position: absolute;
+  background: rgba(214, 194, 102, 0.616);
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+.choix ul li:hover .lieux-hiver ul,
+.choix ul li:hover .lieux-été ul {
+  display: block;
+  margin: 30px;
+}
+.choix ul li:hover .lieux-hiver ul li,
+.choix ul li:hover .lieux-été ul li {
+  padding: 5px;
+  width: 150px;
+  border-bottom: 1px dotted rgb(255, 255, 255);
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+.choix ul li:hover .lieux-hiver ul li a,
+.choix ul li:hover .lieux-été ul li a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+/*        le tableau   border="1" cellspacing="0"        */
+caption {
+  font-size: 7rem;
+  text-transform: capitalize;
+  font-family: "Cookie";
+  color: rgb(33, 129, 185);
+}
+.content-T {
+  border-collapse: collapse;
+  margin: 100px 0;
+  font-size: 30px;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgb(0, 0, 15);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.content-T thead tr {
+  background-color: rgb(122, 204, 122);
+  color: rgb(25, 18, 70);
+  text-align: center;
+}
+
+.content-T thead th,
+.content-T thead td {
+  padding: 12px 15px;
+}
+
+.content-T tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.content-T tbody tr:nth-of-type(2n) {
+  background-color: #f3f3f3;
+}
+
+.content-T tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(122, 204, 122);
+}
+
+/* contact          */
+.footer-contact h3 .footer-services h3 .footer-horaires h3 .footer-media h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.footer-contact p {
+  padding: 5px 0;
+}
+/* sevices         */
+.liste-services,
+.liste-horaires,
+.liste-media,
+.liste-partenaires {
+  list-style-type: none;
+}
+.liste-services li {
+  padding: 2px 0;
+}
+.liste-services a {
+  text-decoration: none;
+  color: #333;
+}
+.liste-services a:hover {
+  color: rgb(136, 62, 62);
+}
+
+/*     media          */
+.liste-media {
+  position: relative;
+  right: 10px;
+}
+img.icone {
+  width: 40px;
+  margin: 10px 10px;
+}
+
+.liste-media a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+/*   partenaires       */
+.liste-partenaires li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+/*   media   queries         */
+
+@media screen and (max-width: 1300px) {
+  .contenu-footer {
+    width: 700px;
+    flex-wrap: wrap;
+  }
+  .bloc {
+    width: 40%;
+
+    margin: 0 0;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contenu-footer {
+    width: 320px;
+  }
+
+  .bloc {
+    width: 300px;
+    margin: 30px 30px;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .bloc:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.liste-d dt {
+  text-align: center;
+}
+
+.liste-d dl dt a {
+  font-size: 5em;
+  font-family: "Cookie";
+  color: royalblue;
+}
+.liste-d dl dd {
+  font-size: 2.5rem;
+}
+.liste-d dl dd ul li {
+  font-size: 25px;
+  color: rgb(16, 94, 55);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+a:hover {
+  opacity: 1;
+}
+/* header */
+
+nav {
+  background: rgb(195, 216, 255);
+}
+
+.navi {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  background: transparent;
+}
+.navi ul {
+  display: inline-flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+#logo {
+  flex: 1 1 40rem;
+}
+.home,
+.navi ul li:hover {
+  background: rgb(180, 204, 248);
+  border-radius: 3px;
+}
+
+.navi ul li a {
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2.5rem;
+  color: rgb(33, 129, 185);
+}
+
+.menu {
+  display: none;
+}
+
+.navi ul li:hover .menu {
+  display: block;
+  position: absolute;
+  background-color: #bdfcec;
+  margin-top: 15px;
+  margin-left: -15px;
+  z-index: 1;
+}
+.navi ul li:hover .menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.navi ul li:hover .menu ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #f1f1f1;
+  background: transparent;
+  border-radius: 2px;
+  text-align: left;
+}
+
+/* phootoo bech */
+.imge {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.imge img {
+  width: 100%;
+
+  background-size: cover;
+}
+
+.he {
+  color: rgb(147, 80, 196);
+  position: absolute;
+  top: 10%;
+  font-size: 9rem;
+  text-align: center;
+  width: 100%;
+  font-family: "Cookie";
+}
+
+.he1 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 30%;
+  font-size: 5rem;
+  text-align: center;
+  width: 100%;
+}
+.he2 {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.inter h1 {
+  text-align: center;
+  font-family: "Cookie";
+  font-size: 5rem;
+  margin: 5rem;
+  padding: 5rem;
+}
+
+.inter p {
+  font-size: 2.5rem;
+  margin: 5rem;
+  padding: 5rem;
+}
+.inter p em {
+  color: blueviolet;
+}
+.inter {
+  background-color: rgb(177, 231, 177);
+  display: flex;
+}
+.color1 {
+  background-color: #c3a74b;
+}
+.color2 {
+  background-color: #62cb83;
+}
+audio {
+  display: none;
+}
